@@ -2,7 +2,7 @@ import React from "react";
 
 const TouristInfoCards = () => {
   return (
-    <div>
+    <div className="allCards">
       <div className="card">
         <img
           src="https://www.eblip10.org/portals/96/gcmb-people-make-glasgow-lw093.jpg"
