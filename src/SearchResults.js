@@ -13,15 +13,15 @@ const SearchResults = props => {
       <tbody>
         <tr>
           <th scope="row">1 result</th>
-          <td> // </td>
-          <td> // </td>
-          <td> // </td>
+          <td>a</td>
+          <td>b</td>
+          <td>c</td>
         </tr>
         <tr>
-          <th scope="row">2 result</th>
-          <td> // </td>
-          <td> // </td>
-          <td>// </td>
+          <th scope="row">1 result</th>
+          <td>d</td>
+          <td>e</td>
+          <td>f</td>
         </tr>
       </tbody>
     </table>

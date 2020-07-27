@@ -25,7 +25,7 @@ const Bookings = () => {
             "check out date"
           ]}
         />
-        {/* <SearchResults results={FakeBookings} /> */}
+        {/* <SearchResults results={FakeBookings} />  */}
       </div>
     </div>
   );
