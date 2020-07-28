@@ -11,18 +11,21 @@ const SearchResults = props => {
         </tr>
       </thead>
       <tbody>
-        <tr>
-          <th scope="row">1 result</th>
-          <td>a</td>
-          <td>b</td>
-          <td>c</td>
-        </tr>
-        <tr>
-          <th scope="row">1 result</th>
-          <td>d</td>
-          <td>e</td>
-          <td>f</td>
-        </tr>
+        {props.results.map((result, idx) => {
+          return (
+            <tr scope="row">
+              <td>{idx + 1}</td>
+              <td>{result.id}</td>
+              <td>{result.title}</td>
+              <td>{result.firstName}</td>
+              <td>{result.surname}</td>
+              <td>{result.email}</td>
+              <td>{result.roomId}</td>
+              <td>{result.checkInDate}</td>
+              <td>{result.checkOutDate}</td>
+            </tr>
+          );
+        })}
       </tbody>
     </table>
   );
