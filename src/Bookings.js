@@ -26,7 +26,6 @@ const Bookings = () => {
           ]}
           results={FakeBookings}
         />
-        {/* <SearchResults results={FakeBookings} />   */}
       </div>
     </div>
   );

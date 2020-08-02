@@ -1,17 +1,5 @@
-#556270,
-#4ECDC4,
-#C7F464,
-#FF6B6B,
-#C44D58 #69D2E7,
-#A7DBD8,
-#E0E4CC,
-#F38630,
-#FA6900,
-#69D2E7,
-#A7DBD8,
-#E0E4CC .App {
+.App {
   text-align: left;
-  background-color: #a7dbd8;
 }
 
 .App-header {
@@ -23,18 +11,20 @@
   font-size: 15px;
   font-weight: bold;
 }
+
 .App-logo {
   animation: App-logo-spin infinite 20s linear;
-  position: relative;
+  /* position: relative; */
   width: 100px;
   height: 50px;
 }
+
 .logoHeading {
   color: #ff6b6b;
   font-size: 60px;
   position: absolute;
   top: 0px;
-  left: 10px;
+  left: 100px;
   bottom: 0px;
 }
 
