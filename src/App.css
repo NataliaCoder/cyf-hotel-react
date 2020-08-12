@@ -76,3 +76,6 @@ tr {
 }
 .btn-primary {
 }
+.selected {
+  background-color: indigo !important;
+}

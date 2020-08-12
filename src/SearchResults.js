@@ -1,9 +1,20 @@
-import React from "react";
+import React, { useState } from "react";
 import moment from "moment";
 
 const SearchResults = props => {
+  const [selectedRow, setSelectedRow] = useState(null);
+
+  const selectTableRow = event => {
+    console.log(event);
+    if (selectedRow) {
+      selectedRow.className = "";
+    }
+    setSelectedRow(event.currentTarget);
+    selectedRow.className = "selected";
+  };
+
   return (
-    <table className="table table-striped">
+    <table className="table" id="searchResult">
       <thead>
         <tr>
           {props.tables.map(items => {
@@ -15,7 +26,7 @@ const SearchResults = props => {
       <tbody>
         {props.results.map((result, idx) => {
           return (
-            <tr scope="row">
+            <tr scope="row" onClick={selectTableRow}>
               <td>{idx + 1}</td>
               <td>{result.id}</td>
               <td>{result.title}</td>

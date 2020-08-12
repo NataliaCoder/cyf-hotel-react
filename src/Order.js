@@ -1,16 +1,16 @@
 import React, { useState } from "react";
-import Restaurant from "./Restaurant";
+import RestaurantButton from "./RestaurantButton";
 
-const Order = () => {
+const Order = props => {
   const [orders, setOrders] = useState(0);
 
   const orderOne = () => {
     setOrders(orders + 1);
   };
   return (
-    <div>
-      <li>Pizzas: {orders}</li>
-    </div>
+    <li>
+      {props.orderType}: {orders} <RestaurantButton handleClick={orderOne} />
+    </li>
   );
 };
 export default Order;
