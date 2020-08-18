@@ -2,16 +2,16 @@ import React, { useState } from "react";
 import moment from "moment";
 
 const SearchResults = props => {
-  const [selectedRow, setSelectedRow] = useState(null);
+  // const[selectedRow, setSelectedRow] = useState(null);
 
-  const selectTableRow = event => {
-    console.log(event);
-    if (selectedRow) {
-      selectedRow.className = "";
-    }
-    setSelectedRow(event.currentTarget);
-    selectedRow.className = "selected";
-  };
+  // const selectTableRow =(event)=>{
+  // console.log(event);
+  // if (selectedRow){
+  // selectedRow.className = "";
+  // }
+  // setSelectedRow(event.currentTarget);
+  // selectedRow.className = "selected";
+  // };
 
   return (
     <table className="table" id="searchResult">
@@ -26,7 +26,7 @@ const SearchResults = props => {
       <tbody>
         {props.results.map((result, idx) => {
           return (
-            <tr scope="row" onClick={selectTableRow}>
+            <tr scope="row">
               <td>{idx + 1}</td>
               <td>{result.id}</td>
               <td>{result.title}</td>

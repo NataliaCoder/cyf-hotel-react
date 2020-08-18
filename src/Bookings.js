@@ -4,10 +4,24 @@ import SearchResults from "./SearchResults.js";
 import FakeBookings from "./data/fakeBookings.json";
 
 const Bookings = () => {
+  const [bookings, setBookings] = useState([]);
+
   const search = searchVal => {
+    fetch(`https://cyf-react.glitch.me`)
+      .then(res => res.json())
+      .then(data =>
+        setBookings(
+          data.filter(
+            record =>
+              record.firstName.includes(searchVal) ||
+              record.surname.includes(searchVal)
+          )
+        )
+      );
+    //  setBookings(bookings.filter(record =>
+    //   (record.firstName.includes(searchVal) || record.surname.includes(searchVal))));
     console.info("TO DO!", searchVal);
   };
-  const [bookings, setBookings] = useState([]);
 
   useEffect(() => {
     fetch(`https://cyf-react.glitch.me`)
